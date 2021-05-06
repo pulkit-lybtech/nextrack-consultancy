@@ -1,0 +1,193 @@
+body{
+     
+ }
+
+ .btn.btn-yellow{
+     background-color: $yellow;
+     color: $dark;
+     text-transform: none;
+     padding: 0.90005rem 2.0125rem;
+     line-height: 1;
+        display: inline-flex;
+        align-items: center;
+     i{
+         margin-left: 0.45rem;
+         font-size: 1.5rem;
+     }
+
+     &:hover{
+         background: darken($yellow, 15);
+     }
+ }
+ .title{
+     font-weight: 700;
+ }
+
+ .bg-blue{
+    background: $blue;
+ }
+
+ .fw-bold{
+     font-weight: bold;
+ }
+
+ .section-title{
+     margin-bottom: 3.5rem;
+     text-align: center;
+     h1,h2{
+         font-weight: 700;
+         color: $dark;
+     }
+     h2{
+         font-size: 2.333rem;
+     }
+     .h1{
+         font-size: 2.333rem;
+     }
+ }
+
+ .our-client-slider{
+     .item{
+         height: 100%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         padding: 2rem 0;
+         max-height: 120px;
+         img{
+             max-width: 140px;
+         }
+     }
+ }
+
+ .consult{
+     .bg-light{
+         left: 0;
+         top: 0;
+         bottom: 0;
+         right: 50%;
+         background: $light-blue !important;
+         @include mediaq($md){
+             right: 0;
+             bottom: 50%;
+         }
+     }
+     .bg-el{
+        left: 0;
+        top: 2rem;
+        position: absolute;
+
+        @include mediaq($lg){
+            width: 60%;
+        }
+        @include mediaq($md){
+            width: 45%;
+            
+        }
+        @include mediaq($sm){
+            width: 45%;
+            rect{
+                transform: matrix(0.707106, -0.7077, 0.707106, 0.707107, 433, 23.5) scale(2.333);
+            }
+        }
+     }
+
+     .inner{
+         margin-top: 2rem;
+         @include mediaq($lg){
+             margin-top: 3rem;
+             padding-bottom: 10rem;
+         }
+
+         @include mediaq($md){
+             text-align: center;
+         }
+         .display-4{
+             font-size: 2.5rem;
+
+             @include mediaq($md) {
+                 font-size: 2rem;
+             }
+         }
+     }
+     
+
+     .contact-blue{
+         .form-control{
+             background: transparent;
+            padding-left: .5rem;
+            border-bottom: 1px solid #cefefebb;
+            color: #fff;
+            &::placeholder{
+                color: #efecefbb;
+            }
+             &:focus{
+                 box-shadow: none;
+                 border-color: #fff;
+             }
+
+             .btn.btn-yellow.btn-white{
+                 &:hover{
+                     background: #aaaaaa !important;
+                 }
+             }
+         }
+            .btn.btn-white{
+                 &:hover{
+                     background: #aaaaaa !important;
+                 }
+             }
+     }
+ }
+
+
+ .page-header{
+     padding: 4rem 0;
+     background-image: url('../img/page-header.png');
+     background-position: center;
+     position: relative;
+     background-repeat: no-repeat;
+     background-size: cover;
+
+     &::before{
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        position: absolute;
+        content: '';
+        mix-blend-mode: darken;
+        background: linear-gradient(103.37deg, rgba(73, 73, 73, 0.18) 2.41%, rgba(0, 0, 0, 0.548) 51.93%);
+     }
+
+     &.about{
+        background-image: url('../img/about-us.jpg');
+        padding: 5rem 0;
+        background-attachment: fixed;
+        .title{
+            margin-bottom: 1.75rem;
+        }
+        .lead{
+            margin-bottom: 1.5rem;
+        }
+
+        &::before{
+            
+background: linear-gradient(0deg, rgba(0, 69, 118, 0.75), rgba(0, 69, 118, 0.75));
+        }
+
+     }
+
+     .inner{
+         .title{
+             font-size: 2.66rem;
+
+             @include mediaq($md) {
+                 font-size: 1.777rem;
+             }
+         }
+         .lead{
+             color: #fff;
+         }
+     }
+ }
