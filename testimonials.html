@@ -126,6 +126,50 @@
                 </div>            
             </div> <!-- ./page-header -->
 
+            <div class="test-p-slider pt-5 mt-5">
+                <div class="container">
+                    <div class="row flex-column-reverse flex-lg-row ">
+                        <div class="col-lg-6">
+                            <div class="inner px-3 pr-lg-5">
+                                <h2 class="title h1 text-dark">
+                                    Directly From Our Clients
+                                </h2>
+                                <hr class="mb-4 bg-dark" />
+
+                                <div class="btn-group">
+                                    <button class="btn mr-2 btn-outline-primary">
+                                        <i class="las  la-angle-left"></i>
+                                    </button>
+                                    <button class="btn btn-outline-primary">
+                                        <i class="las   la-angle-right"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div id="video-slider" class="owl-carousel owl-theme">
+                                <div class="item-video" data-merge="3"><a class="owl-video" href="https://vimeo.com/23924346"></a></div>
+                                <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=JpxsRwnRwCQ"></a></div>
+                                <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=FBu_jxT1PkA"></a></div>
+                                <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=oy18DJwy5lI"></a></div>
+                                <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=H3jLkJrhHKQ"></a></div>
+                                <div class="item-video" data-merge="3"><a class="owl-video" href="https://www.youtube.com/watch?v=g3J4VxWIM6s"></a></div>
+                                <div class="item-video" data-merge="1"><a class="owl-video" href="https://www.youtube.com/watch?v=0fhoIate4qI"></a></div>
+                                <div class="item-video" data-merge="2"><a class="owl-video" href="https://www.youtube.com/watch?v=EF_kj2ojZaE"></a></div>
+                            </div>
+
+                            <div  class=" d-none owl-carousel owl-theme">
+                                <div class="item-video" ><a class="owl-video" href="https://www.youtube.com/watch?v=x2VUutdbZGw&t=2s"></a></div>
+                                <div class="item-video" ><a class="owl-video" href="https://www.youtube.com/watch?v=FnCH8V5ypA0&t=134s"></a></div>
+                                <div class="item-video" ><a class="owl-video" href="https://www.youtube.com/watch?v=VqSF1mdnG7g"></a></div>
+                                <div class="item-video" ><a class="owl-video" href="https://www.youtube.com/watch?v=AUiEAqVMqyo&t=11s"></a></div>
+                                <div class="item-video" ><a class="owl-video" href="https://www.youtube.com/watch?v=xpD_6oJy-Ck&t=51s"></a></div>
+                                <div class="item-video" ><a class="owl-video" href="https://www.youtube.com/watch?v=2EjvTMf3tF0"></a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
@@ -236,8 +280,26 @@
     <script src="./assets/js/bootstrap.bundle.min.js"></script>
     <!-- <script src="./assets/js/owl.carousel.min.js" ></script> -->
     <script src="https://cdn.boomcdn.com/libs/owl-carousel/2.3.4/owl.carousel.min.js"></script>
-    <script src="./assets/js/main.js" defer></script>
-
+    <script src="./assets/js/main.js" ></script>
+    <script>
+        $('.owl-carousel').owlCarousel({
+        items:1,
+        merge:true,
+        loop:true,
+        margin:10,
+        video:true,
+        lazyLoad:true,
+        center:true,
+        responsive:{
+            480:{
+                items:2
+            },
+            600:{
+                items:4
+            }
+        }
+    })
+    </script>
 </body>
 </html>
 

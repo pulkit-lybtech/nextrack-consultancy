@@ -70,6 +70,16 @@ $(document).ready(() => {
     });
 
 
+    $('#video-slider').owlCarousel({
+        items:1,
+        merge:true,
+        margin:10,
+        // videoHeight: 480,
+        video:true,
+        center:true,
+    })
+
+
 
 
 
