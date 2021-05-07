@@ -5,13 +5,17 @@
 }
 
 body{
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: 'Raleway', sans-serif;
     font-size: 16px;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,h2,h3,h4,h5,h6, strong {
     text-transform: none;
     letter-spacing: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+ul{
+    padding-left: 1.5rem;
 }
 
 .py-6{

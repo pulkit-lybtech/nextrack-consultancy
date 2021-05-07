@@ -55,4 +55,34 @@ $(document).ready(() => {
             }
         }
     })
+
+    
+    $(".btn-submit").click(function () {
+        //Fetch form to apply custom Bootstrap validation
+        var form = $(".form-check")
+        // console.log($('#fileInput')[0].files[0]);
+        if (form[0].checkValidity() === false)
+        {
+            event.preventDefault()
+            event.stopPropagation()
+        }
+        form.addClass('was-validated')
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 })

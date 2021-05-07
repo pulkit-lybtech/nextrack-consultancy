@@ -1,5 +1,5 @@
 @import './bootstrap.min.css';
-@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500;700&family=Raleway&display=swap");
 .mt-6 {
   margin-top: 6rem;
 }
@@ -31,13 +31,18 @@
 }
 
 body {
-  font-family: "Josefin Sans", sans-serif;
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, strong {
   text-transform: none;
   letter-spacing: 0;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+ul {
+  padding-left: 1.5rem;
 }
 
 .py-6 {
@@ -481,6 +486,124 @@ header.header .main-header .navbar .navbar-nav .nav-item .dropdown-item {
   }
 }
 
+.blog-page .pagination {
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.blog-page .pagination .nav-link {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.25rem;
+  transition: 0.25s ease;
+  border-bottom: 2px solid transparent;
+  color: #787878;
+}
+.blog-page .pagination .nav-link i {
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.blog-page .pagination .nav-link.active, .blog-page .pagination .nav-link:active {
+  border-bottom: 2px solid #FFD65E;
+  color: #383838;
+}
+.blog-page .pagination .nav-link:hover {
+  border-bottom: 2px solid rgba(255, 214, 94, 0.5);
+}
+
+.blog-list {
+  margin-bottom: 5rem;
+}
+.blog-list .card.blog:not(:last-child) {
+  margin-bottom: 2rem;
+}
+.blog-list .card.blog .img {
+  flex: 0 0 44%;
+  max-width: 44%;
+  position: relative;
+  overflow: hidden;
+  min-height: 16rem;
+}
+@media only screen and (max-width: 768px) {
+  .blog-list .card.blog .img {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+.blog-list .card.blog .img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media only screen and (max-width: 768px) {
+  .blog-list .card.blog .img img {
+    height: auto;
+    width: 100%;
+  }
+}
+.blog-list .card.blog .inner {
+  padding: 1.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .blog-list .card.blog .inner {
+    padding: 1.25rem;
+    font-size: 95%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .blog-list .card.blog .inner {
+    padding: 1.125rem;
+    font-size: 95%;
+  }
+  .blog-list .card.blog .inner .btn {
+    font-size: 0.85rem;
+  }
+  .blog-list .card.blog .inner .mb-4 {
+    margin-bottom: 1.112rem !important;
+  }
+}
+
+.careers-page .page-header {
+  background-image: url(../img/careers.jpg);
+  background-position: center;
+}
+.careers-page + .cta .bg-el {
+  right: 0;
+}
+@media only screen and (max-width: 768px) {
+  .careers-page + .cta .display-4 {
+    font-size: 2.66rem;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .careers-page + .cta .display-4 {
+    font-size: 2.3333rem;
+  }
+}
+
+.job-list {
+  margin-top: 5rem;
+}
+.job-list .job-card {
+  width: 100%;
+  padding: 1.25rem;
+  margin-bottom: 3rem;
+}
+.job-list .job-card:nth-child(even) {
+  background: rgba(196, 196, 196, 0.125);
+}
+.job-list .job-card .j-inner {
+  margin-top: 2rem;
+}
+.job-list .job-card .inner {
+  padding: 1.125rem;
+}
+.job-list .job-card .inner h2, .job-list .job-card .inner h3, .job-list .job-card .inner h4, .job-list .job-card .inner h5, .job-list .job-card .inner strong {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
 footer.footer {
   background-color: #000;
   padding: 5rem 0 0;
@@ -551,8 +674,9 @@ footer.footer .footer-bottom .nav-link:hover {
 .btn.btn-yellow {
   background-color: #FFD65E;
   color: #121213;
+  font-size: 0.95rem;
   text-transform: none;
-  padding: 0.90005rem 2.0125rem;
+  padding: 0.90005rem 1.75rem;
   line-height: 1;
   display: inline-flex;
   align-items: center;

@@ -403,3 +403,128 @@
         }
     }
 }
+
+.blog-page{
+    .pagination{
+        align-items: center;
+        margin-bottom: 2rem;
+        .nav-link{
+            font-family: "Josefin Sans" , sans-serif;
+            font-size: 1.25rem;
+            transition: 0.25s ease;
+            border-bottom: 2px solid transparent;
+            color: darken($gray, 30 );
+            i{
+                font-size: 1.5rem;
+                line-height: 1.5;
+            }
+
+            &.active,
+            &:active{
+                border-bottom: 2px solid $yellow;
+                color: darken($gray, 55);
+            }
+
+            &:hover{
+                border-bottom: 2px solid rgba($color:  $yellow, $alpha: 0.5);
+            }
+        }
+    }
+}
+.blog-list{
+    margin-bottom: 5rem;
+    .card.blog{
+        &:not(:last-child){
+            margin-bottom: 2rem;
+        }
+        .img{
+            flex: 0 0 44%;
+            max-width: 44%;
+            position: relative;
+            overflow: hidden;
+            min-height: 16rem;
+
+            @include mediaq($md){
+                flex: 0 0 100%;
+                max-width: 100%;
+            }
+            img{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                object-fit: cover;
+
+                @include mediaq($md) {
+                    height: auto;
+                    width: 100%;
+                }
+            }
+        }
+        .inner{
+            padding: 1.5rem;
+            @include mediaq($md){
+                padding: 1.25rem;
+                font-size: 95%;
+            }
+            @include mediaq($sm){
+                padding: 1.125rem;
+                font-size: 95%;
+                .btn{
+                    font-size: .85rem;
+                }
+                .mb-4{
+                    margin-bottom: 1.112rem !important;
+                }
+            }
+        }
+    }
+}
+
+.careers-page{
+    .page-header{
+        background-image: url(../img/careers.jpg);
+        background-position: center    ;
+    }
+    & + .cta{
+        .bg-el{
+            // top: 2rem;
+            right: 0;
+        }
+
+        .display-4{
+            @include mediaq($md){
+                font-size: 2.66rem;
+            }
+            @include mediaq($sm){
+                font-size: 2.3333rem;
+            }
+        }
+    }
+}
+.job-list{
+    margin-top: 5rem;
+
+   
+    .job-card{
+        width: 100%;
+        padding: 1.25rem;
+        margin-bottom: 3rem;
+        &:nth-child(even){
+            background: rgba($gray, .125);
+        }
+        .j-inner{
+            margin-top: 2rem;
+        }
+        .inner{
+             padding: 1.125rem;
+
+             h2,h3,h4,h5, strong
+             {
+                 display: block;
+                margin-bottom: 1.5rem;
+             }
+             
+        }
+    }
+}
