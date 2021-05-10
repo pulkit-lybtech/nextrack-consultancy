@@ -745,6 +745,17 @@ footer.footer .footer-bottom .nav-link:hover {
     bottom: 50%;
   }
 }
+.consult::after {
+  position: absolute;
+  content: "";
+  width: 12rem;
+  height: 12rem;
+  right: 0;
+  top: 4rem;
+  background: url("../img/bg-el.svg") no-repeat;
+  mix-blend-mode: multiply;
+  transform: translate();
+}
 .consult .bg-el {
   left: 0;
   top: 2rem;

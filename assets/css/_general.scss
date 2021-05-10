@@ -70,6 +70,18 @@
              bottom: 50%;
          }
      }
+     &::after{
+        position: absolute;
+        content: "";
+        width: 8rem;
+        height: 12rem;
+        right: 0;
+        top: 4rem;
+        background: url(../img/bg-el.svg) no-repeat;
+        mix-blend-mode: multiply;
+        background-size: contain;
+    }
+    }
      .bg-el{
         left: 0;
         top: 2rem;
@@ -111,6 +123,8 @@
      
 
      .contact-blue{
+
+        
          .form-control{
              background: transparent;
             padding-left: .5rem;
