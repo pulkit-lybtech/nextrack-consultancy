@@ -607,6 +607,24 @@ header.header .main-header .navbar .navbar-nav .nav-item .dropdown-item {
 .test-page .page-header {
   background-image: url("../img/test.jpg");
 }
+.test-page .video-slider .owl-carousel .owl-video-play-icon {
+  background: url(owl.video.play.png) no-repeat;
+}
+.test-page .video-slider .owl-item {
+  opacity: 0;
+  transition: 0.25s;
+}
+.test-page .video-slider .owl-item.active {
+  opacity: 1;
+}
+.test-page .video-slider .item-video {
+  height: 280px;
+  width: 100%;
+  background-image: url("../img/logo.png");
+}
+.test-page .grid .grid-item {
+  margin-bottom: 2rem;
+}
 
 footer.footer {
   background-color: #000;
@@ -732,6 +750,28 @@ footer.footer .footer-bottom .nav-link:hover {
   max-width: 140px;
 }
 
+.consult .inner {
+  margin-top: 2rem;
+}
+@media only screen and (max-width: 991px) {
+  .consult .inner {
+    margin-top: 3rem;
+    padding-bottom: 10rem;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .consult .inner {
+    text-align: center;
+  }
+}
+.consult .inner .display-4 {
+  font-size: 2.5rem;
+}
+@media only screen and (max-width: 768px) {
+  .consult .inner .display-4 {
+    font-size: 2rem;
+  }
+}
 .consult .bg-light {
   left: 0;
   top: 0;
@@ -748,13 +788,13 @@ footer.footer .footer-bottom .nav-link:hover {
 .consult::after {
   position: absolute;
   content: "";
-  width: 12rem;
+  width: 8rem;
   height: 12rem;
   right: 0;
   top: 4rem;
-  background: url("../img/bg-el.svg") no-repeat;
+  background: url(../img/bg-el.svg) no-repeat;
   mix-blend-mode: multiply;
-  transform: translate();
+  background-size: contain;
 }
 .consult .bg-el {
   left: 0;
@@ -779,51 +819,30 @@ footer.footer .footer-bottom .nav-link:hover {
     transform: matrix(0.707106, -0.7077, 0.707106, 0.707107, 433, 23.5) scale(2.333);
   }
 }
-.consult .inner {
-  margin-top: 2rem;
-}
-@media only screen and (max-width: 991px) {
-  .consult .inner {
-    margin-top: 3rem;
-    padding-bottom: 10rem;
-  }
-}
-@media only screen and (max-width: 768px) {
-  .consult .inner {
-    text-align: center;
-  }
-}
-.consult .inner .display-4 {
-  font-size: 2.5rem;
-}
-@media only screen and (max-width: 768px) {
-  .consult .inner .display-4 {
-    font-size: 2rem;
-  }
-}
-.consult .contact-blue .form-control {
+
+.contact-blue .form-control {
   background: transparent;
   padding-left: 0.5rem;
   border-bottom: 1px solid #cefefebb;
   color: #fff;
 }
-.consult .contact-blue .form-control::-moz-placeholder {
+.contact-blue .form-control::-moz-placeholder {
   color: #efecefbb;
 }
-.consult .contact-blue .form-control:-ms-input-placeholder {
+.contact-blue .form-control:-ms-input-placeholder {
   color: #efecefbb;
 }
-.consult .contact-blue .form-control::placeholder {
+.contact-blue .form-control::placeholder {
   color: #efecefbb;
 }
-.consult .contact-blue .form-control:focus {
+.contact-blue .form-control:focus {
   box-shadow: none;
   border-color: #fff;
 }
-.consult .contact-blue .form-control .btn.btn-yellow.btn-white:hover {
+.contact-blue .form-control .btn.btn-yellow.btn-white:hover {
   background: #aaaaaa !important;
 }
-.consult .contact-blue .btn.btn-white:hover {
+.contact-blue .form-control .btn.btn-white:hover {
   background: #aaaaaa !important;
 }
 
@@ -869,4 +888,66 @@ footer.footer .footer-bottom .nav-link:hover {
 }
 .page-header .inner .lead {
   color: #fff;
+}
+
+.blog-content {
+  padding-bottom: 5rem;
+  font-size: 18px;
+}
+.blog-content p {
+  font-size: 1em;
+  color: #454645;
+  margin-bottom: 2em;
+  line-height: 1.66666;
+}
+.blog-content h1, .blog-content h2, .blog-content h3, .blog-content h4, .blog-content h5 {
+  font-weight: 600;
+  color: #121213;
+  margin-bottom: 1em;
+}
+.blog-content blockquote {
+  margin: 1.5rem auto;
+  background: rgba(255, 214, 94, 0.35);
+  padding: 1.5rem 1.5rem;
+  position: relative;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  color: #112233;
+  font-style: italic;
+}
+.blog-content ul {
+  padding-left: 1.5em;
+  list-style: square;
+}
+.blog-content ul li {
+  font-size: 0.9em;
+  margin-bottom: 0.5em;
+}
+
+.f-list h4 {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+.f-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+@media only screen and (max-width: 991px) {
+  .f-list ul {
+    margin-bottom: 2rem;
+  }
+}
+.f-list ul li {
+  font-size: 0.95rem;
+  display: flex;
+  margin-bottom: 0.5rem;
+}
+.f-list ul li::before {
+  content: "-";
+  display: block;
+  padding-right: 0.5rem;
 }

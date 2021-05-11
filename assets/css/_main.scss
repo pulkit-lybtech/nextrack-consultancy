@@ -534,5 +534,27 @@
         background-image: url('../img/test.jpg');
     }
 
-    
+    .video-slider{
+        .owl-carousel .owl-video-play-icon{
+            background: url(owl.video.play.png) no-repeat;
+        }
+        .owl-item{
+            opacity: 0;
+            transition: .25s;
+            &.active{
+                opacity: 1;
+            }
+        }
+        .item-video{           
+            height: 280px;
+            width: 100%;
+            background-image: url('../img/logo.png');
+            
+        }
+    }
+    .grid{
+        .grid-item {
+            margin-bottom: 2rem;
+        }
+    }
 }

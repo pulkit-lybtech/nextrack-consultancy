@@ -69,18 +69,37 @@ $(document).ready(() => {
         form.addClass('was-validated')
     });
 
-
-    $('#video-slider').owlCarousel({
+    var testSlider = $('.video-slider');
+    testSlider.owlCarousel({
         items:1,
-        merge:true,
-        margin:10,
+        merge:false,
+        margin: 0,
+        loop: false,
+        video: true,
+        width: 480,
+        lazyLoad:true,
+        // onTranslate: function() {
+        //     $('.owl-video-wrapper').find('iframe').each(function() {
+        //         this.click();
+        //     });
+        // }
         // videoHeight: 480,
-        video:true,
-        center:true,
     })
 
 
+    $('#test-prev').click(function() {
+        testSlider.trigger('prev.owl.carousel');
+        testSlider.trigger('stop.owl.video');
+    })
+    $('#test-next').click(function() {
+        testSlider.trigger('next.owl.carousel');
+        testSlider.trigger('stop.owl.video');
+    })
 
+    testSlider.on('changed.owl.carousel', function(event) {
+        testSlider.trigger('stop.owl.video');
+
+    })
 
 
 
