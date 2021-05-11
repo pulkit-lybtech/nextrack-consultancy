@@ -272,3 +272,35 @@
          }
      }
  }
+
+ .head-line{
+     max-width: 460px;
+     margin: auto;
+     position: relative;
+
+     h3{
+        max-width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        color: #004576 !important;
+        padding: .25rem .5rem;
+        background: #fff;
+        &::before, &::after{
+            content: '';
+            top: calc(50% - 4px);
+            height: 2px;
+            background-color: #0077CC;
+            position: absolute;
+            width: 50%;
+            z-index: -1;
+        }
+   
+        &::before{
+            right: 0;
+        }
+        &::after{
+            left: 0;
+        }
+     }
+
+ }

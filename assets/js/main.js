@@ -12,7 +12,7 @@ $(document).ready(() => {
 
     // our client slider 
     
-    $('#our-client-slider').owlCarousel({
+    $('#our-client-slider, #our-client-slider1, #our-client-slider2').owlCarousel({
         loop:true,
         margin:16,
         nav:false,

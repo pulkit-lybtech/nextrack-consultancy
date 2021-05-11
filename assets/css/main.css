@@ -951,3 +951,34 @@ footer.footer .footer-bottom .nav-link:hover {
   display: block;
   padding-right: 0.5rem;
 }
+
+.head-line {
+  max-width: 460px;
+  margin: auto;
+  position: relative;
+}
+.head-line h3 {
+  max-width: -webkit-fit-content;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  color: #004576 !important;
+  padding: 0.25rem 0.5rem;
+  background: #fff;
+}
+.head-line h3::before, .head-line h3::after {
+  content: "";
+  top: calc(50% - 4px);
+  height: 2px;
+  background-color: #0077CC;
+  position: absolute;
+  width: 50%;
+  z-index: -1;
+}
+.head-line h3::before {
+  right: 0;
+}
+.head-line h3::after {
+  left: 0;
+}
