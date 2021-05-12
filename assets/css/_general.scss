@@ -208,7 +208,7 @@
  }
 
  .blog-content{
-     padding-bottom: 5rem;
+    //  padding-bottom: 5rem;
      font-size: 18px;
 
      p{
@@ -303,4 +303,36 @@
         }
      }
 
+ }
+
+ .category{
+     display: flex;
+     align-items: center;
+     h6{
+         font-family: "Raleway", sans-serif;
+         letter-spacing: 1px;
+         font-size: .9rem;
+         font-weight: 600;
+     }
+     span{
+        //  margin-right: 8px;
+         font-size: .95rem  ;
+         padding: .5rem;
+         &::after{
+             content: ',';
+         }
+     }
+ }
+
+ .social-share{
+     a{
+         opacity: .5;
+         transition: .5s opacity;
+         padding: .5rem;
+
+         &:hover{
+             opacity: 1;
+         }
+         
+     }
  }

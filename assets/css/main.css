@@ -891,7 +891,6 @@ footer.footer .footer-bottom .nav-link:hover {
 }
 
 .blog-content {
-  padding-bottom: 5rem;
   font-size: 18px;
 }
 .blog-content p {
@@ -981,4 +980,31 @@ footer.footer .footer-bottom .nav-link:hover {
 }
 .head-line h3::after {
   left: 0;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+}
+.category h6 {
+  font-family: "Raleway", sans-serif;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.category span {
+  font-size: 0.95rem;
+  padding: 0.5rem;
+}
+.category span::after {
+  content: ",";
+}
+
+.social-share a {
+  opacity: 0.5;
+  transition: 0.5s opacity;
+  padding: 0.5rem;
+}
+.social-share a:hover {
+  opacity: 1;
 }

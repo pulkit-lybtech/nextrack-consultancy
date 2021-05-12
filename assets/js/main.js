@@ -90,6 +90,8 @@ $(document).ready(() => {
     $('#test-prev').click(function() {
         testSlider.trigger('prev.owl.carousel');
         testSlider.trigger('stop.owl.video');
+        testSlider.find('iframe').each().click();
+
     })
     $('#test-next').click(function() {
         testSlider.trigger('next.owl.carousel');
